@@ -18,6 +18,13 @@ npm run build
 npm run build --report
 {{#unit}}
 
+# set up heroku
+heroku apps:create <heroku-app-name>
+heroku git:remote -a <heroku-app-name> -r <remote-name>
+
+# push to heroku follows [Heroku guide](https://devcenter.heroku.com/articles/git)
+git push <remote-name> master
+
 # run unit tests
 npm run unit
 {{/unit}}
